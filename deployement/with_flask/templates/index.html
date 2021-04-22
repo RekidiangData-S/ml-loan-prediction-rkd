@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Rekidiang Data</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+<img src=
+"data_logo_resized.png"
+         alt="REkiding data logo", width="400", height="150", style="float:left">
+
+<img src=
+https://totaldatascience.com/wp-content/uploads/2019/10/TOTAL-1.png"
+         alt="REkiding data project image", width="200", height="70", style="float:right">
+
+<style>
+body {
+  background-image: url("https://th.bing.com/th/id/Reb28a50e93aa8136f7eec06f00556d70?rik=AMDl%2fgGr8HsRdw&riu=http%3a%2f%2fwww.donwrightdesigns.com%2fwp-content%2fuploads%2f2012%2f11%2fsample-water.gif&ehk=Eun5%2b76al1VLPAnjGDW%2fkjcyqsmdlYXTv42k%2bOsEj20%3d&risl=&pid=ImgRaw");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Iris Flower Species Classification</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+    	<input type="number", step="0.01" name="sepal length" placeholder="sepal length" required="required" />
+      <input type="number", step="0.01" name="sepal width" placeholder="sepal width" required="required" />
+		  <input type="number", step="0.01" name="petal length" placeholder="Votes" required="required" />
+      <input type="number", step="0.01" name="petal width" placeholder="Location" required="required" />
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+ <img title="a title" alt="Alt text" src="my_ethiquette.png">
+
+
+</body>
+</html>
